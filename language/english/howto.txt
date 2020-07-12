@@ -1,0 +1,45 @@
+[b]Comment Anywhere  == The series of minahito's great works ==[/b]
+
+
+[b]SUMMARY:[/b]
+A module for appending quick-comment-form just after the body of contents.
+If you want to change plain textarea to XOOPS dhtml form, use the plug-in for Smarty named "smarty_dhtml_v100"
+You can find it in sourceforge.jp (http://sourceforge.jp/projects/exmodules)
+
+
+[b]HOW TO INSTALL[/b]
+First of all, you have to put exFrame >= 0.87 into your modules folder.
+It is not necessary to install exFrame. Just put it.
+If you already put exFrame there, skip this operation.
+
+Turn "Hooking block" on to the modules you want by block admin.
+Anywhere (left or right) , any weight is all right.
+Add the permission to all (even guests) by group admin.
+
+You can use "blocks admin module" for your convenience. :-)
+
+You'd better set the weight of "Hooking block" large as possible.
+
+After this, clear complied cache files in templates_c/.
+You can find such a feature in admin of this module.
+
+
+[b]NOTICE[/b]
+This module is not a versatile.
+Some modules can't display quick-comment-form.
+
+I've checked the compatibilities to the modules like:
+
+- news
+- myAlbum-P
+- TinyD
+- mydownloads
+- mylinks
+
+[b]HOW TO UNINSTALL[/b]
+
+1. Turn "Hooking block" off.
+2. Clear the compiled cache.
+2. Deactivate this module.
+3. Uninstall this module.
+

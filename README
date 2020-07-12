@@ -1,0 +1,84 @@
+[mlimg]
+[xlang:en]
+
+[b]Comment Anywhere  == The series of minahito's great works ==[/b]
+
+
+[b]SUMMARY:[/b]
+A module for appending quick-comment-form just after the body of contents.
+If you want to change plain textarea to XOOPS dhtml form, use the plug-in for Smarty named "smarty_dhtml_v100"
+You can find it in sourceforge.jp (http://sourceforge.jp/projects/exmodules)
+
+
+[b]HOW TO INSTALL[/b]
+First of all, you have to put exFrame >= 0.87 into your modules folder.
+It is not necessary to install exFrame. Just put it.
+If you already put exFrame there, skip this operation.
+
+Turn "Hooking block" on to the modules you want by block admin.
+Anywhere (left or right) , any weight is all right.
+Add the permission to all (even guests) by group admin.
+
+You can use "blocks admin module" for your convenience. :-)
+
+You'd better set the weight of "Hooking block" large as possible.
+
+After this, clear complied cache files in templates_c/.
+You can find such a feature in admin of this module.
+
+
+[b]NOTICE[/b]
+This module is not a versatile.
+Some modules can't display quick-comment-form.
+
+I've checked the compatibilities to the modules like:
+
+- news
+- myAlbum-P
+- TinyD
+- mydownloads
+- mylinks
+
+[b]HOW TO UNINSTALL[/b]
+
+1. Turn "Hooking block" off.
+2. Clear the compiled cache.
+2. Deactivate this module.
+3. Uninstall this module.
+
+
+[/xlang:en]
+[xlang:ja]
+
+[b]どこでも XOOPS コメント　GIJOE Hacked版[/b]
+
+[b]はじめに[/b]
+　「コメントの投函」フォームをメインコンテンツ下部にねじこむモジュールです。
+　なおフォームは通常の textarea なので bb code を使用したい場合は「DHtmlTextArea 表示用 smarty プラグイン」などを使って、テンプレート commentany_center.html を修正して下さい。
+
+[b]利用方法[/b]
+
+(1) まずは、exFrame最新版を、modules ディレクトリに置いてください。インストールする必要はありません。
+
+(2) 次に、どこでもXOOPSコメントモジュールを通常通りインストールします。
+
+(3) 続いて「フックでXOOPSコメント」を、ブロック管理などで、目的モジュールに対して「表示」する設定にします。実際には、このブロックは表示を行いませんので、左右中央、どこに配置しても構いません。ただし、表示順だけは、出来る限り大きな数値にしておくのが良いでしょう。
+
+　このブロックは、Smarty がコンパイルキャッシュを生成する際にテンプレートの include 文を滑り込ませるトリガーとなりますので、コメント権限とは無関係に先にゲストにアクセス権限を振っておいた方が無難です。（コメントフォームの表示・非表示は別のロジックで行います。たとえばゲストにコメントを許していないときは、コメント欄は表示されません）
+
+この一連の作業には、blocks adminモジュールの利用がお勧めです。
+
+(4) 以上の準備が終わりましたら、Smarty のコンパイルキャッシュ（templates_cの中身）をすべてクリアする必要があります。
+　管理メニューより Cache Clear を選び、 Confirm ボタンを押して下さい。
+　コメント表示対象モジュールを変更した場合にも、コンパイルキャッシュクリア操作が必要です。
+
+(5) この状態で、目的のモジュールを表示すれば、「どこでもXOOPSコメント」の入力フォームが潜り込んだコンパイルキャッシュが、templates_c に新たに生成される、という仕組みです。
+
+　なお、以上の動作原理から、Smarty を使用しないモジュールでは表示不可能です。
+
+[b]どこでもトラックバックとの相性[/b]
+　「フックでXOOPSコメント」ブロックを、「どこでもトラックバック」の「フックでトラックバック」ブロックと同じモジュールに配置する場合、「フックでXOOPSコメント」ブロックの方が、表示順で後ろに来るようにしてください。
+　「フックでトラックバック」ブロックが後に処理されると、「フックでXOOPSコメント」ブロックの処理がキャンセルされてしまいます。
+　将来的には、どちらが先に処理されても問題ないようになる予定です。
+
+[/xlang:ja]

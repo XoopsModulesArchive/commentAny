@@ -1,0 +1,63 @@
+<{if $commentany.com_itemid}>
+	<form action="comment_post.php" method="POST">
+	<input type="hidden" name="com_itemid" value="<{$commentany.com_itemid}>">
+	<input type="hidden" name="XOOPS_TOKEN_REQUEST" value="<{$commentany.xoops_token_request}>">
+	<table class='outer' cellspacing='1' style="margin-top:2em;">
+		<tr>
+			<th colspan="2"><{$smarty.const._MB_COMMENTANY_LANG_NEW_COMMENT}></th>
+		</tr>
+		<{*
+		<tr>
+			<td class='head' align='left'><{$smarty.const._MB_COMMENTANY_LANG_RULE}></td>
+			<td class='odd' align='left'>
+				<{$commentany.rule_text}>
+			</td>
+		</tr>
+		*}>
+		<tr>
+			<td class='head' align='left'><{$smarty.const._MB_COMMENTANY_LANG_ICON}></td>
+			<td class='odd' align='left'>
+				<{foreach item=i from=$commentany.com_icon}>
+					<input type="radio" name="com_icon" value="<{$i}>"><img src="<{$smarty.const.XOOPS_URL}>/images/subject/<{$i}>">
+				<{/foreach}>
+			</td>
+		</tr>
+		<tr>
+			<td class='head' align='left'><{$smarty.const._MB_COMMENTANY_LANG_TITLE}></td>
+			<td class='odd' align='left'>
+				<input type="text" name="com_title" size="64" maxlength="255" value="<{$xoops_default_comment_title}>">
+			</td>
+		</tr>
+		<tr>
+			<td class='head' align='left'><{$smarty.const._MB_COMMENTANY_LANG_TEXT}></td>
+			<td class='odd' align='left'>
+				<textarea name="com_text" cols=50 rows=4></textarea>
+			</td>
+		</tr>
+		<{*
+		<tr>
+			<td class='head' align='left'><{$smarty.const._MB_COMMENTANY_LANG_OPTION}></td>
+			<td class='odd' align='left'>
+				<input type="checkbox" name="dosmiley" value="1" checked><{$smarty.const._CM_DOSMILEY}><br/>
+				<input type="checkbox" name="doxcode" value="1" checked><{$smarty.const._CM_DOXCODE}><br/>
+				<input type="checkbox" name="dobr" value="1" checked><{$smarty.const._CM_DOAUTOWRAP}><br/>
+			</td>
+		</tr>
+		*}>
+		<tr>
+			<td class='head' align='left'></td>
+			<td class='even' align='left'>
+				<input type='submit' class='formButton' name='com_dopreview' id='com_dopreview' value='<{$smarty.const._MB_COMMENTANY_LANG_PREVIEW}>' />
+				&nbsp;<input type='submit' class='formButton' name='com_dopost'  id='com_dopost' value='<{$smarty.const._MB_COMMENTANY_LANG_SUBMIT}>' />
+			</td>
+		</tr>
+	</table>
+	<input type="hidden" name="dohtml" value="0" />
+	<input type="hidden" name="dosmiley" value="1" />
+	<input type="hidden" name="doxcode" value="1" />
+	<input type="hidden" name="dobr" value="1" />
+	</form>
+<{/if}>
+
+<{$commentsnav|replace:'button':'hidden'}>
+

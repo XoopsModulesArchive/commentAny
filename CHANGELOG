@@ -1,0 +1,60 @@
+[xlang:en]
+
+++ v0.13->v0.14
+* fixed a compatibility with core 2.0.16 from xoops.org
+
+++ v0.12->v0.13
+* fixed a bug around com_anonpost
+
+++ v0.11->v0.12
+* fixed a bug around approve (thx minahito)
+
+++ v0.10->v0.11
+* modified for XOOPS >= 2.0.10 (using XoopsSecurity::createToken())
+
+++ v0.03->v0.10 GIJOE Hacked Version
+* modified the place of comment-form
+* modified the 'Post Comment' button into hidden
+* added the default title as <{$xoops_default_comment_title}> (TinyD etc.)
+* modified the compatibility with the module "track back anywhere"
+* modified commentany_center.html simple as possible
+* added .htaccess and index.html into some directories
+* modified documents
+
+
+[/xlang:en]
+[xlang:ja]
+
+
+++ v0.13->v0.14
+* 本家版2.0.16に対応
+
+++ v0.12->v0.13
+* 「匿名によるコメント投稿」の設定を見るように修正
+
+++ v0.11->v0.12
+* コメントの承認を必要とすると、投稿画面が出ないバグを修正 (thx minahito)
+
+++ v0.10->v0.11
+* XOOPS >= 2.0.10 への対応 (XoopsSecurity::createToken()を利用)
+
+++ v0.03->v0.10 GIJOE Hacked版 （好き放題手を入れてます）
+* コメントフォーム入力場所を、ナビゲーションのある場所にした
+* ナビゲーションの「投稿する」ボタンをhiddenにした
+* <{$xoops_default_comment_title}> を初期タイトルにした (TinyDが対応済)
+* 「どこでもトラックバック」などとの他のフック系モジュールとの相性対策をした
+* デフォルトのテンプレートを極力シンプルにした
+* ダイレクトアクセス対策
+* ドキュメントを整備した（あまりにアレだったもので:-D）
+* モジュール名の(仮)を外した
+
+++ v0.02->v0.03
+* ファイル構成に抜けがあったのを埋めた
+
+++ v0.01->v0.02
+* コメントのルールを参照して動作を変えるようにした
+* メッセージアイコンをテンプレート側で引き込めるようにした
+* コメントに関するルールをメッセージ側で引き込めるようにした
+* モジュール名に(仮)を入れた
+
+[/xlang:ja]
